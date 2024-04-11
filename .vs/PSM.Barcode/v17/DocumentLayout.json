@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DevCurrent\\PSM.Barcode\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4D12C071-CF4E-49DC-B100-C273E12826D4}|PSM.Barcode\\PSM.Barcode.csproj|c:\\devcurrent\\psm.barcode\\psm.barcode\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D12C071-CF4E-49DC-B100-C273E12826D4}|PSM.Barcode\\PSM.Barcode.csproj|solutionrelative:psm.barcode\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D12C071-CF4E-49DC-B100-C273E12826D4}|PSM.Barcode\\PSM.Barcode.csproj|c:\\devcurrent\\psm.barcode\\psm.barcode\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D12C071-CF4E-49DC-B100-C273E12826D4}|PSM.Barcode\\PSM.Barcode.csproj|solutionrelative:psm.barcode\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D12C071-CF4E-49DC-B100-C273E12826D4}|PSM.Barcode\\PSM.Barcode.csproj|c:\\devcurrent\\psm.barcode\\psm.barcode\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D12C071-CF4E-49DC-B100-C273E12826D4}|PSM.Barcode\\PSM.Barcode.csproj|solutionrelative:psm.barcode\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\obj\\Debug\\net8.0-android\\AndroidManifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PSM.Barcode\\obj\\Debug\\net8.0-android\\AndroidManifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\obj\\Debug\\net8.0-android\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "PSM.Barcode\\obj\\Debug\\net8.0-android\\AndroidManifest.xml",
+              "ToolTip": "C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\obj\\Debug\\net8.0-android\\AndroidManifest.xml",
+              "RelativeToolTip": "PSM.Barcode\\obj\\Debug\\net8.0-android\\AndroidManifest.xml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-04-11T09:06:03.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\Platforms\\Android\\MainActivity.cs",
+              "RelativeDocumentMoniker": "PSM.Barcode\\Platforms\\Android\\MainActivity.cs",
+              "ToolTip": "C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\Platforms\\Android\\MainActivity.cs",
+              "RelativeToolTip": "PSM.Barcode\\Platforms\\Android\\MainActivity.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAABQAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T08:44:42.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainApplication.cs",
+              "DocumentMoniker": "C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\Platforms\\Android\\MainApplication.cs",
+              "RelativeDocumentMoniker": "PSM.Barcode\\Platforms\\Android\\MainApplication.cs",
+              "ToolTip": "C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\Platforms\\Android\\MainApplication.cs",
+              "RelativeToolTip": "PSM.Barcode\\Platforms\\Android\\MainApplication.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T08:44:16.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "PSM.Barcode\\MainPage.xaml.cs",
+              "ToolTip": "C:\\DevCurrent\\PSM.Barcode\\PSM.Barcode\\MainPage.xaml.cs",
+              "RelativeToolTip": "PSM.Barcode\\MainPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T08:19:59.142Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
