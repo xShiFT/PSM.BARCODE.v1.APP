@@ -11,10 +11,12 @@
 	
 	<ScrollView>
 		<VerticalStackLayout>
+
 			<HorizontalStackLayout>
-				<Button Command="{Binding CmdAddNew}" Text="Add New" />
-				<Label Text="{Binding Count}" />
+				<Button Margin="3" Command="{Binding CmdAddNew}" Text="Add New Rnd" />
+				<Label Margin="3" Text="{Binding Count, StringFormat=Count: {0}}" />
 			</HorizontalStackLayout>
+
 			<ListView ItemsSource="{Binding BarcodeItems}">
 				<ListView.ItemTemplate>
 					<DataTemplate>
@@ -22,6 +24,7 @@
 					</DataTemplate>
 				</ListView.ItemTemplate>
 			</ListView>
+
 		</VerticalStackLayout>
 	</ScrollView>
 

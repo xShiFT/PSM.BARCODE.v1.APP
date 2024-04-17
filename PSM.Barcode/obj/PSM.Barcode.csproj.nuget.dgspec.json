@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\dev\\PSM.BARCODE\\PSM.Barcode\\PSM.Barcode.csproj",
         "projectName": "PSM.Barcode",
         "projectPath": "C:\\dev\\PSM.BARCODE\\PSM.Barcode\\PSM.Barcode.csproj",
-        "packagesPath": "C:\\Users\\xshif\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\novikovab\\.nuget\\packages\\",
         "outputPath": "C:\\dev\\PSM.BARCODE\\PSM.Barcode\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
@@ -18,7 +18,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\xshif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\novikovab\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -70,7 +70,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.3, )",
+              "version": "[8.0.4, )",
               "autoReferenced": true
             }
           },
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -117,7 +117,7 @@
         "projectUniqueName": "C:\\dev\\PSM.BARCODE\\SDK.Scanner\\SDK.Scanner.csproj",
         "projectName": "SDK.Scanner",
         "projectPath": "C:\\dev\\PSM.BARCODE\\SDK.Scanner\\SDK.Scanner.csproj",
-        "packagesPath": "C:\\Users\\xshif\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\novikovab\\.nuget\\packages\\",
         "outputPath": "C:\\dev\\PSM.BARCODE\\SDK.Scanner\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
@@ -125,7 +125,7 @@
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\xshif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\novikovab\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -186,7 +186,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

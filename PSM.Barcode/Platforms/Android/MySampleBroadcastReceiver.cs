@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.Device;
 using Android.Widget;
+using PSM.Barcode.ViewModels;
 
 namespace PSM.Barcode.Platforms.Android
 {
@@ -19,7 +20,8 @@ namespace PSM.Barcode.Platforms.Android
 
 			if (result != null)
 			{
-				Toast.MakeText(context, result, ToastLength.Short).Show();
+				MainViewModel.Instance?.AddNewItem(result);
+				Toast.MakeText(context, result, ToastLength.Short)?.Show();
 				//Toast.MakeText(Application.Context, result, ToastLength.Short).Show();
 				// edittext.SetText( result.ToCharArray, 0, "" + result.Length);
 			}
