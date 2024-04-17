@@ -2,7 +2,7 @@
 
 namespace PSM.Barcode.ViewModels;
 
-public class BarcodeItem : ViewModel
+public class BarcodeItem : NotifyPropertyBase
 {
 	private string _barcode;
 	private string _outCode;
