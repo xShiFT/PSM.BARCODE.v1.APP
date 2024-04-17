@@ -8,14 +8,14 @@ public class BarcodeItem : NotifyPropertyBase
 	private string _outCode;
 
 
-    public BarcodeItem(string barcode)
-    {
-        _barcode = barcode;
+	public BarcodeItem(string barcode)
+	{
+		_barcode = barcode;
 		_outCode = ""; // find in sqlite db
-    }
+	}
 
 
-    public string Barcode
+	public string Barcode
 	{
 		get => _barcode;
 		set => SetValue(ref _barcode, value);
