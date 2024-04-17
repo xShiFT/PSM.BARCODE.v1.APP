@@ -1,25 +1,46 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace PSM.Barcode
+using PSM.Barcode.DataAccess;
+using PSM.Barcode.Utilities;
+using PSM.Barcode.ViewModels;
+
+namespace PSM.Barcode;
+
+public static class MauiProgram
 {
-	public static class MauiProgram
+	public static MauiApp CreateMauiApp()
 	{
-		public static MauiApp CreateMauiApp()
+		var builder = MauiApp.CreateBuilder();
+		builder
+			.UseMauiApp<App>()
+			.ConfigureFonts(fonts =>
+			{
+				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+			})
+			.RegisterViewModels()
+			;
+
+		var dbCtx = new XDbContext();
+		dbCtx.Database.EnsureCreated();
+		if (!dbCtx.BarcodePairs.Any())
 		{
-			var builder = MauiApp.CreateBuilder();
-			builder
-				.UseMauiApp<App>()
-				.ConfigureFonts(fonts =>
-				{
-					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-					fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-				});
+			foreach (var pair in Codes.Pairs)
+				dbCtx.BarcodePairs.Add(new Models.BarcodePairs { Barcode = pair.Key, Outcode = pair.Value });
+			dbCtx.SaveChanges();
+		}
+		dbCtx.Dispose();
 
 #if DEBUG
-			builder.Logging.AddDebug();
+		builder.Logging.AddDebug();
 #endif
 
-			return builder.Build();
-		}
+		return builder.Build();
+	}
+
+	public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
+	{
+		mauiAppBuilder.Services.AddSingleton<MainViewModel>();
+		return mauiAppBuilder;
 	}
 }

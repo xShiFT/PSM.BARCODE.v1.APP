@@ -1,4 +1,6 @@
 ﻿using Microsoft.Maui.Controls;
+using PSM.Barcode.DataAccess;
+using PSM.Barcode.Models;
 using PSM.Barcode.Mvvm;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -9,7 +11,7 @@ public class MainViewModel : ViewModel
 {
 	public static MainViewModel Instance { get; } = new MainViewModel();
 
-	private MainViewModel()
+	public MainViewModel()
 	{
 		BarcodeItems.CollectionChanged += (sender, e) => {
 			OnPropertyChanged(nameof(Count));
@@ -20,7 +22,6 @@ public class MainViewModel : ViewModel
 	}
 
 	public ObservableCollection<BarcodeItem> BarcodeItems { get; } = new();
-	//public List<BarcodeItem> BarcodeItems { get; } = new();
 	public int Count => BarcodeItems.Count;
 
 	public ICommand CmdAddNew { get; set; }
@@ -31,8 +32,7 @@ public class MainViewModel : ViewModel
 
 	public void AddNewItem(string barcode)
 	{
-		BarcodeItems.Add(new BarcodeItem(barcode));
-		//OnPropertyChanged(nameof(Count));
-		//OnPropertyChanged(nameof(BarcodeItems));
+		if (!BarcodeItems.Any(b => b.Barcode == barcode))
+			BarcodeItems.Add(new BarcodeItem(barcode));
 	}
 }
