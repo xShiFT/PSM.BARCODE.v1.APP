@@ -10,19 +10,21 @@ namespace PSM.Barcode
 	[Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
 	public class MainActivity : MauiAppCompatActivity
 	{
-		private MySampleBroadcastReceiver _receiver;
-		private ScanManager _scanManager;
+		private readonly MySampleBroadcastReceiver _receiver;
+		private readonly ScanManager _scanManager;
 
-		protected override void OnCreate(Bundle? savedInstanceState)
-		{
-			base.OnCreate(savedInstanceState);
-
+        public MainActivity()
+        {
 			// Initialize the ScanManager
 			_scanManager = new ScanManager();
-
 			// Initialize the Receiver
 			_receiver = new MySampleBroadcastReceiver();
 		}
+
+		//protected override void OnCreate(Bundle? savedInstanceState)
+		//{
+		//	base.OnCreate(savedInstanceState);
+		//}
 
 		protected override void OnResume()
 		{

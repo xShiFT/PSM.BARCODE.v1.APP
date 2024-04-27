@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.Input;
+using PSM.Barcode.Views;
 using System.Windows.Input;
 
 namespace PSM.Barcode.ViewModels;
@@ -8,28 +9,14 @@ public class MainViewModel : ObservableObject
 {
 	public static MainViewModel Instance { get; } = new MainViewModel();
 
-	public MainViewModel()
+	private MainViewModel()
 	{
-		BarcodeItems.CollectionChanged += (sender, e) => {
-			OnPropertyChanged(nameof(Count));
-			OnPropertyChanged(nameof(BarcodeItems));
-		};
-
-		CmdAddNew = new Command(AddNew);
+		CmdToLogin = new RelayCommand(async () => { await Shell.Current.GoToAsync(nameof(LoginPage)); });
+		CmdToBarcodes = new RelayCommand(async () => { await Shell.Current.GoToAsync(nameof(BarcodesPage)); });
+		CmdUpdate = new RelayCommand(() => {; });
 	}
 
-	public ObservableCollection<BarcodeItem> BarcodeItems { get; } = new();
-	public int Count => BarcodeItems.Count;
-
-	public ICommand CmdAddNew { get; set; }
-	private void AddNew(object param)
-	{
-		AddNewItem(Random.Shared.Next(24000000, 24999999).ToString());
-	}
-
-	public void AddNewItem(string barcode)
-	{
-		if (!BarcodeItems.Any(b => b.BarCode == barcode))
-			BarcodeItems.Add(new BarcodeItem(barcode));
-	}
+	public ICommand CmdToLogin { get; }
+	public ICommand CmdToBarcodes { get; }
+	public ICommand CmdUpdate { get; }
 }

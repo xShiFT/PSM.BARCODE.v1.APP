@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:vm="clr-namespace:PSM.Barcode.ViewModels"
+	x:Class="PSM.Barcode.Views.BarcodesPage"
+	Title="Barcodes"
+	BindingContext="{x:Static vm:BarcodesViewModel.Instance}"
+>
+	<Shell.BackButtonBehavior>
+		<BackButtonBehavior Command="{Binding CmdNavBack}" />
+	</Shell.BackButtonBehavior>
+
+	<ContentPage.ToolbarItems>
+		<!--<ToolbarItem Text="Add" />-->
+		<ToolbarItem Text="Rnd" Command="{Binding CmdAddNew}" />
+	</ContentPage.ToolbarItems>
+
+	<ContentPage.Resources>
+		<DataTemplate x:Key="dtBarcodeItem" x:DataType="{x:Type vm:BarcodeItem}">
+			<Grid Margin="3">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="110" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Label Grid.Column="0" Margin="3,0" Text="{Binding BarCode}" FontSize="Medium" FontAttributes="Bold" />
+				<Label Grid.Column="1" Margin="3,0" Text="{Binding OutCode}" FontSize="Medium" />
+			</Grid>
+		</DataTemplate>
+	</ContentPage.Resources>
+
+	<ScrollView>
+		<VerticalStackLayout>
+			<HorizontalStackLayout HorizontalOptions="Center">
+				<Label Margin="3" Text="Собрано:" FontSize="Subtitle" />
+				<Label Margin="3" Text="{Binding Barcodes.Count}" FontSize="Subtitle" FontAttributes="Bold" />
+			</HorizontalStackLayout>
+			<Border StrokeThickness="1" Stroke="Silver" Margin="0" Padding="5">
+				<!-- Header="Header" Footer="Footer" -->
+				<CollectionView ItemsSource="{Binding Barcodes.Items}" ItemTemplate="{StaticResource dtBarcodeItem}" />
+			</Border>
+		</VerticalStackLayout>
+	</ScrollView>
+</ContentPage>

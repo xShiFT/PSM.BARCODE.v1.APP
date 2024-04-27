@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:vm="clr-namespace:PSM.Barcode.ViewModels"
+	x:Class="PSM.Barcode.Views.MainPage"
+	BindingContext="{x:Static vm:MainViewModel.Instance}"
+>
+	<VerticalStackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+		<Label Margin="5" Text="Welcome to .NET MAUI!" VerticalOptions="Center" HorizontalOptions="Center" />
+
+		<Frame Margin="5" BorderColor="Silver" CornerRadius="5" HorizontalOptions="FillAndExpand">
+			<HorizontalStackLayout>
+				<Label Margin="5" Text="Login: " VerticalTextAlignment="Center" />
+				<Label Margin="5" Text="not logged" FontAttributes="Bold" VerticalTextAlignment="Center" />
+				<Button Text="Login" Command="{Binding CmdToLogin}" />
+			</HorizontalStackLayout>
+		</Frame>
+
+		<Frame Margin="5" BorderColor="Silver" CornerRadius="5" HorizontalOptions="CenterAndExpand">
+			<VerticalStackLayout>
+				<Button Margin="0,1,0,0" Text="Сбор штрихкодов" FontSize="Medium" Command="{Binding CmdToBarcodes}" />
+				<Button Margin="0,1,0,0" Text="Обновить Внеш.Коды" FontSize="Medium" Command="{Binding CmdUpdate}" />
+			</VerticalStackLayout>
+		</Frame>
+
+	</VerticalStackLayout>
+</ContentPage>

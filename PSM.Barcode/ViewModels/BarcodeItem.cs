@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using PSM.Barcode.DataAccess;
+using PSM.Barcode.DB;
 
 namespace PSM.Barcode.ViewModels;
 
