@@ -19,6 +19,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			})
 			.RegisterViewModels()
+			.RegisterViews()
 			;
 
 		var dbCtx = new XDbContext();
@@ -26,7 +27,7 @@ public static class MauiProgram
 		if (!dbCtx.BarcodePairs.Any())
 		{
 			foreach (var pair in Codes.Pairs)
-				dbCtx.BarcodePairs.Add(new Models.BarcodePairs { Barcode = pair.Key, Outcode = pair.Value });
+				dbCtx.BarcodePairs.Add(new Models.BarcodePairs { BarCode = pair.Key, OutCode = pair.Value });
 			dbCtx.SaveChanges();
 		}
 		dbCtx.Dispose();
@@ -41,6 +42,12 @@ public static class MauiProgram
 	public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
 	{
 		mauiAppBuilder.Services.AddSingleton<MainViewModel>();
+		return mauiAppBuilder;
+	}
+
+	public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
+	{
+		mauiAppBuilder.Services.AddSingleton<MainPage>();
 		return mauiAppBuilder;
 	}
 }

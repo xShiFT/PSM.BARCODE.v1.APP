@@ -8,24 +8,32 @@
 >
 	<ScrollView>
 		<VerticalStackLayout>
-			<HorizontalStackLayout>
-				<Button Margin="3" Command="{Binding CmdAddNew}" Text="Add New Rnd" />
-				<Label Margin="3" Text="{Binding Count, StringFormat=Count: {0}}" />
+			<Border StrokeThickness="1" Stroke="Silver" Margin="0" Padding="5">
+				<HorizontalStackLayout>
+					<Button Margin="3" Command="{Binding CmdAddNew}" Text="Add New Rnd" />
+				</HorizontalStackLayout>
+			</Border>
+			<HorizontalStackLayout HorizontalOptions="Center">
+				<Label Margin="3" Text="Собрано:" FontSize="Subtitle" />
+				<Label Margin="3" Text="{Binding Count}" FontSize="Subtitle" FontAttributes="Bold" />
 			</HorizontalStackLayout>
-			<CollectionView ItemsSource="{Binding BarcodeItems}" Header="Header" Footer="Footer">
-				<CollectionView.ItemTemplate>
-					<DataTemplate>
-						<Grid>
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="150" />
-								<ColumnDefinition />
-							</Grid.ColumnDefinitions>
-							<Label Grid.Column="0" Margin="5" Text="{Binding Barcode}" FontSize="Medium" FontAttributes="Bold" />
-							<Label Grid.Column="1" Margin="5" Text="{Binding Outcode}" FontSize="Medium" />
-						</Grid>
-					</DataTemplate>
-				</CollectionView.ItemTemplate>
-			</CollectionView>
+			<Border StrokeThickness="1" Stroke="Silver" Margin="0" Padding="5">
+				<!-- Header="Header" Footer="Footer"-->
+				<CollectionView ItemsSource="{Binding BarcodeItems}">
+					<CollectionView.ItemTemplate>
+						<DataTemplate>
+							<Grid Margin="3">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="110" />
+									<ColumnDefinition />
+								</Grid.ColumnDefinitions>
+								<Label Grid.Column="0" Margin="3,0" Text="{Binding BarCode}" FontSize="Medium" FontAttributes="Bold" />
+								<Label Grid.Column="1" Margin="3,0" Text="{Binding OutCode}" FontSize="Medium" />
+							</Grid>
+						</DataTemplate>
+					</CollectionView.ItemTemplate>
+				</CollectionView>
+			</Border>
 		</VerticalStackLayout>
 	</ScrollView>
 </ContentPage>

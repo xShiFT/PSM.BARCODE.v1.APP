@@ -1,13 +1,10 @@
-﻿using Microsoft.Maui.Controls;
-using PSM.Barcode.DataAccess;
-using PSM.Barcode.Models;
-using PSM.Barcode.Mvvm;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace PSM.Barcode.ViewModels;
 
-public class MainViewModel : ViewModel
+public class MainViewModel : ObservableObject
 {
 	public static MainViewModel Instance { get; } = new MainViewModel();
 
@@ -32,7 +29,7 @@ public class MainViewModel : ViewModel
 
 	public void AddNewItem(string barcode)
 	{
-		if (!BarcodeItems.Any(b => b.Barcode == barcode))
+		if (!BarcodeItems.Any(b => b.BarCode == barcode))
 			BarcodeItems.Add(new BarcodeItem(barcode));
 	}
 }
